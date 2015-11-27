@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="A"
+         name="artifice"
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IProject"
+            id="com.artifice.methodrenamer.contribution1">
+         <menu
+               label="Artifice Tools"
+               path="additions"
+               id="com.artifice.refactoring.menu1">
+            <separator>
+            </separator>
+         </menu>
+         <action
+               label="Obfuscator"
+               class="com.artifice.refactoring.popup.actions.Rename"
+               menubarPath="com.artifice.refactoring.menu1/group1"
+               enablesFor="1"
+               id="com.artifice.refactoring.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
